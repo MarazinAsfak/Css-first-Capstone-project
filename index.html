@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operation-freedom</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+    <style>
+      *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        line-height: 1.6rem;
+        font-family: Arial, Helvetica, sans-serif;
+    
+      }
+      
+      .maintaine-size{
+        max-width: 1200px;
+        margin: auto;
+        margin-bottom: 50px;
+    
+      }
+      header{
+        
+        position: sticky;
+        top: 0;
+        height: 60px;
+        background-color: aliceblue;
+        margin-bottom: 80px;
+      }
+      .header-container{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+         height: 60px;
+
+      }
+      .nav-links{
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        list-style: none;
+
+      }
+      .nav-links li a{
+        text-decoration: none;
+        color: rgb(35, 34, 34);
+      }
+
+      .nav-links .header-contact-btn {
+        background-color: rgb(225, 3, 3);
+        padding: 5px 10px;
+        border-radius: 5px;
+      }
+      .header-container h2{
+        color: rgb(218, 4, 4);
+        font-size: 30px;
+        font-weight: bold;
+      }
+      /* start the hero section */
+      .hero-alignment{
+        display: flex;
+       justify-content:space-between;
+
+      }
+      .right-hero-content img{
+         width:500px;
+         height: 300px;
+         border-radius: 5px;
+      }
+      .left-hero-content h1{
+        font-size: 40px;
+
+      }
+      .hero-para-particular{
+        color: rgb(229, 7, 7);
+        margin-top: 10px;
+        margin-bottom: 10px;
+        font-size: 20px;
+        font-weight:bold;
+
+      }
+      .hero-left-para p{
+        width: 630px;
+        margin-bottom: 10px;
+      }
+      .hero-left-exprince-conainer{
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+      }
+      .hero-left-each-ex{
+        text-align: center;
+        /* display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; */
+        /*here i can write this way also*/
+      }
+      .hero-left-each-ex h2{
+         font-size: 30px;
+         color: rgb(227, 5, 5);
+         margin-bottom: 2px;
+      }
+       .hero-left-each-ex p{
+         font-size: 17px;
+       }
+       .left-show-now{
+        display: flex;
+        align-items: center;
+        gap: 10px ;
+        padding: 15px 0px;
+       }
+       .left-show-now a{
+         text-decoration: none;
+        border: 1px rgb(236, 4, 4) solid;
+        color: rgb(242, 5, 5);
+        padding: 10px;
+        border-radius: 6px;
+        font-size: 17px;
+       }
+       .left-show-now a:hover{
+         background-color: rgb(234, 5, 5);
+         color: white;
+       }
+
+       /* about section */
+       .about-container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        padding:20px 0px;
+       }
+       .about-left-image{
+          width:500px;
+         height: 350px;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+       }
+       .about-left-image img{
+         width:500px;
+         height: 300px;
+         object-fit:cover;
+       }
+       .about-left-para p{
+        text-align: center;
+        font-size: 20px;
+        font-weight:bold;
+        margin: 5px;
+       }
+       /* about right-side is ended */
+       /* about right-side is started */
+       .about-right-text-part h1{
+          font-size: 20px;
+          padding: 13px 0px;
+       }
+       .about-right-image p{
+            font-size: 16px;
+            margin-bottom: 10px;
+       }
+       .about-icon-with-text{
+            display: flex;
+            align-items: center;
+            justify-content:space-between;
+            column-gap: 20px;
+            width: 550px;
+            margin-bottom:15px;
+       }
+       .about-rount-tick{
+        margin-right: 5px;
+       }
+       .about-right-learn-more a{
+        padding:10px 20px;
+        text-decoration: none;
+        font-size:15px;
+        background-color: rgb(225, 8, 8);
+        color: aliceblue;
+        border-radius: 5px;
+       }
+        .about-right-learn-more a:hover{
+            background-color: rgb(235, 4, 4);
+        }
+        /* finally fiinished */
+        .Service-cards-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            padding: 60px 0px;
+        }
+        .each-service-card{
+            text-align: center;
+            padding: 20px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+        }
+        .service-card-icon{
+            font-size: 20px;
+            color: rgb(243, 4, 4);
+        }
+        .latest-container{
+            display:flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;   
+           
+                   
+        }
+         .latest-each-cards{
+            overflow: hidden;
+             width: 400px;
+            height: 570px;
+         box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+          z-index: -1; 
+          border-radius: 5px;
+         }
+        .latest-each-cards img{
+            object-fit: cover;
+            width: 400px;
+            height: 400px;
+        }
+        .latest-card-text{
+            padding: 10px;
+        }
+        .latest-card-text h3{
+            font-weight: bold;
+        }
+        .latest-add-to-card-btn{
+            display: flex;
+            justify-content: center;
+            align-items:center;
+        }
+        .latest-add-to-card-btn button{
+            padding:7px;
+            width: 350px;
+            font-size: 17px;
+            background-color:rgb(235, 4, 4);
+            border: none;
+            border-radius: 3px;
+            color: rgb(249, 247, 247);
+        }
+        .latest-each-cards{
+            position: relative;
+        }
+        .latest-offer{
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgb(176, 191, 8);
+            color: white;
+            padding: 7px 8px;
+            border-radius:20px;
+            text-align: center;
+        }
+        .latest-view-all{
+            display: flex;
+         justify-content: center;
+         align-items: center;
+         padding: 40px;
+        }
+        .latest-view-all a{
+            background-color: rgb(227, 10, 10);
+            color: white;
+           text-decoration: none;
+           padding: 5px 20px;
+           border-radius: 6px;
+        }
+        .our-clients-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 55px 0px;
+            gap: 20px;
+        }
+        .each-client-card{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            text-align: center;
+            width: 380px;
+            height: 250px;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            border-radius: 10px;
+            z-index: -1;
+        }
+        .each-client-card img{
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+        }
+        .our-client-rating{
+            font-size: 30px;
+            margin: 15px;
+            color:orange;
+        }
+        .each-client-card{
+            position: relative;
+        }
+        .previous{
+            position: absolute;
+            left: 10px;
+            top: 130px;
+            background-color:rgb(244, 180, 191);
+            width: 30px;
+            height: 25px;
+            text-align: center;
+            font-size:20px;
+            border-radius: 10px;
+            color: rgb(233, 227, 227);
+        }  
+        .Next{
+            position: absolute;
+             right: 5px;
+            top: 130px;
+            background-color:rgb(244, 180, 191);
+            width: 30px;
+            height: 25px;
+            text-align: center;
+            font-size:20px;
+            border-radius: 10px;
+            color: rgb(233, 227, 227);
+        }
+        .subsribe-container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            background-color: rgb(189, 6, 6);
+            height: 300px;
+            row-gap: 20px;
+            padding: 30px;
+        }
+        .subsribe-container h1{
+            font-size:35px;
+            color: rgb(243, 239, 239);
+        }
+        .subsribe-container p{
+            font-size: 17px;
+            color:white;
+        }
+        .subscribe-form-control input{
+         width:200px;
+         height: 40px;
+         border: none;
+         border-radius: 7px;
+        }
+        .subscribe-form-control button{
+            padding:5px 20px;
+            margin-left:5px;
+            background-color: black;
+            color: rgb(237, 232, 232);
+            border: none;
+            border-radius: 5px;
+        }
+        /* final part */
+        .footer-container{
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            gap: 80px;
+            padding: 30px;
+        }
+        .each-footer-links h2{
+            font-size: 25px;
+            color:rgb(230, 223, 223);
+            margin-bottom: 10px;
+        }
+        .each-footer-links .footer-main-links{
+            list-style: none;  
+
+        }
+        .each-footer-links .footer-main-links li a{
+        text-decoration: none;
+        color: rgb(207, 193, 193);
+          margin-bottom: 10px;
+        }
+        .footer-background-color{
+            background-color:rgb(39, 37, 37);
+        }
+        .maintaine-size-1{
+            max-width: 1100px;
+            margin: auto;
+        }
+        .footer-final{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        .footer-final p{
+            color: aliceblue;
+        }
+        .footer-final .footer-alignment{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+            color: rgb(228, 224, 224);
+        }
+        .each-footer-links p{
+            color: rgb(238, 231, 231);
+        }
+        .footer-icon-links{
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            gap: 10px;
+            padding: 6px;
+        }
+        .footer-icon-links li{
+            list-style: none;
+        
+        }
+        .footer-icon-links li a i{
+            color: rgb(212, 220, 226);
+           
+        }
+    </style>
+
+</head>
+<body>
+
+    <!-- css capstone small project -->
+    <header>
+        <div class="header-container maintaine-size">
+            <h2>FBS.</h2>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Reviews</a></li>
+                    <li class="header-contact-btn"><a href="#">Contacts Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main >
+        <!-- hero section -->
+        <section id="hero-section" class="maintaine-size">
+            <div class="hero-alignment">
+                <div class="left-hero-content">
+                    <h1>Elevate Your Style</h1>
+                    <p class="hero-para-particular">Trendy Clothes & Unique Dresses</p>
+                    <div class="hero-left-para">
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non hic sint! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque libero optio voluptatem!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus maiores natus sunt nam ad, non accusamus ut aperiam qui sit fugit cumque</p>
+                    </div>
+                    <div class="hero-left-exprince-conainer">
+                        <div class="hero-left-each-ex">
+                            <h2>5+</h2>
+                            <p>Years Experience</p>
+                        </div>
+                        <div class="hero-left-each-ex">
+                            <h2>100+</h2>
+                            <p>Happy Customers</p>
+                        </div>
+                        <div class="hero-left-each-ex">
+                            <h2>50+</h2>  
+                            <p>Products</p>
+                        </div>
+                    </div>
+
+                    <div class="left-show-now">
+                        <a href="#">Show Now</a>
+                        <a href="#">Explore Collection</a>
+                    </div>
+                </div>
+                <div class="right-hero-content">
+                    <img src="/asstes/img/cantabil-anand-nagar-khandwa-readymade-garment-retailers-iINPEzvImp.avif" alt="hero-image">
+                </div>
+            </div>
+        </section>
+        <!-- finished the section -->
+
+        <!-- about-section -->
+         <section class="maintaine-size" id="about-section" style="background-color: white; margin-top: 50px;">
+             <h1 style="text-align: center; margin-bottom:40px;">About<span style="color: rgb(239, 4, 4); margin-left: 10px;">Us</span></h1>
+             <div class="about-container">
+                <div class="about-left-image">
+                    <img src="/asstes/img/elegant-womans-hand-holding-a-sleek-black-shopping-bag-against-a-vibrant-peach-colored-background-conveying-style-and-sophistication-photo.jpeg" alt="about-image">
+                    <div class="about-left-para">
+                        <p>Fashionable Boutique Store</p>
+                    </div>
+                </div>
+
+                <div class="about-right-text-part">
+                    <h1>Why Choose Us?</h1>
+                    <div class="about-right-image">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vitae eius laboriosam magnam expedita necessitatibus amet iusto delectus corrupti iste velit mollitia consectetur labore tenetur voluptatum, veritatis atque saepe minima illo?</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex, optio unde, temporibus quam praesentium eveniet in nesciunt, fuga consectetur maiores aliquam dolor? Officiis, doloribus vel? Repellendus minus nam beatae amet.</p>
+                    </div>
+
+                    <div class="about-icon-with-text">
+                        <p><span class="about-rount-tick">✅</span>Premium Quality Materials</p>
+                        <p><span class="about-rount-tick">✅</span>Premium Quality Materials</p>
+                    </div>
+
+                    <div class="about-icon-with-text">
+                        <p><span class="about-rount-tick">✅</span>Premium Quality Materials</p>
+                        <p><span class="about-rount-tick">✅</span>Premium Quality Materials</p>
+                    </div>
+
+                    <div class="about-right-learn-more">
+                        <a href="">Learn More</a>
+                    </div>
+                </div>
+             </div>
+         </section>
+         <!-- about-section ended -->
+          <section id="Service" class="maintaine-size">
+
+             <div class="Service-cards-container">
+                <div class="each-service-card">
+                    <p class="service-card-icon"><i class="fa-sharp fa-thin fa-truck"></i></p>
+                    <h2>Free Delivery</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, porro voluptatum.</p>
+                </div>
+                <div class="each-service-card">
+                    <span class="service-card-icon"><i class="fa-thin fa-arrows-repeat"></i></span>
+                    <h2>Free Delivery</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, porro voluptatum.</p>
+                </div>
+                <div class="each-service-card">
+                    <span class="service-card-icon"><i class="fa-sharp fa-thin fa-shield-check"></i></span>
+                    <h2>Free Delivery</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, porro voluptatum.</p>
+                </div>
+             </div>
+          </section>
+
+          <!-- latest Products -->
+           <section id="latest" class="maintaine-size">
+            <h1 style="text-align: center;margin-bottom:40px;">Latest<span style="color: rgb(230, 6, 6); margin-left: 10px;">Products</span></h1>
+            <div class="latest-container">
+                <div class="latest-each-cards">
+                    <span class="latest-offer">15%</span>
+                    <img src="/asstes/img/confident-girl-white-t-shirt-standing-half-turn-looking-forward-isolated-gray-background-confident-girl-317162523.webp" alt="latest-product-img">
+                     <div class="latest-card-text">
+                        <h3>Elegant Evening Dress</h3>
+                         <p>Perfect for special occasions</p>
+                       <span class="latest-card-price">$89.99 <del>$105.99</del></span>
+                     </div>
+                     <div class="latest-add-to-card-btn">
+                        <button type="submit">Add to Cart</button>
+                     </div>
+                </div>
+
+                <div class="latest-each-cards">
+                    <span class="latest-offer">15%</span>
+                    <img src="/asstes/img/confident-girl-white-t-shirt-standing-half-turn-looking-forward-isolated-gray-background-confident-girl-317162523.webp" alt="latest-product-img">
+                     <div class="latest-card-text">
+                        <h3>Elegant Evening Dress</h3>
+                         <p>Perfect for special occasions</p>
+                       <span class="latest-card-price">$89.99 <del>$105.99</del></span>
+                     </div>
+                     <div class="latest-add-to-card-btn">
+                        <button type="submit">Add to Cart</button>
+                     </div>
+                </div>
+
+                <div class="latest-each-cards">
+                    <span class="latest-offer">15%</span>
+                    <img src="/asstes/img/confident-girl-white-t-shirt-standing-half-turn-looking-forward-isolated-gray-background-confident-girl-317162523.webp" alt="latest-product-img">
+                     <div class="latest-card-text">
+                        <h3>Elegant Evening Dress</h3>
+                         <p>Perfect for special occasions</p>
+                       <span class="latest-card-price">$89.99 <del>$105.99</del></span>
+                     </div>
+                     <div class="latest-add-to-card-btn">
+                        <button type="submit">Add to Cart</button>
+                     </div>
+                </div>
+            </div>
+            <div class="latest-view-all">
+                    <a href="">View All Products</a>
+                </div>
+           </section>
+
+           <!-- what our Clients Say -->
+         <section class="what-client" class="maintaine-size">
+             <h1 style="text-align: center; font-size: 40px;">What Our Clients Say</h1>
+
+            <div class="our-clients-container">
+
+                <div class="each-client-card">
+                    <span class="previous">❮</span>
+                    <img src="/asstes/img/elegant-womans-hand-holding-a-sleek-black-shopping-bag-against-a-vibrant-peach-colored-background-conveying-style-and-sophistication-photo.jpeg" alt="client-card">
+                    <h2>Sarah johnson</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit distinctio provident laborum maxime dolore amet</p>
+                    <div class="our-client-rating">★★★★★</div>
+                </div>
+                <div class="each-client-card">
+                    <img src="/asstes/img/elegant-womans-hand-holding-a-sleek-black-shopping-bag-against-a-vibrant-peach-colored-background-conveying-style-and-sophistication-photo.jpeg" alt="client-card">
+                    <h2>Sarah johnson</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit distinctio provident laborum maxime dolore amet</p>
+                    <div class="our-client-rating">★★★★★</div>
+                </div>
+                <div class="each-client-card">
+                    <img src="/asstes/img/elegant-womans-hand-holding-a-sleek-black-shopping-bag-against-a-vibrant-peach-colored-background-conveying-style-and-sophistication-photo.jpeg" alt="client-card">
+                    <h2>Sarah johnson</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Suscipit distinctio provident laborum maxime dolore amet</p>
+                    <div class="our-client-rating">★★★★⯪</div>
+                    <span class="Next">❯</span>
+                </div>
+            </div>
+         </section>
+         <!-- finished -->
+
+         <!-- subcribe to our Newsletter  -->
+         <section id="subscribe-to-our"  class="our-news-back">
+              <div class="subsribe-container" class="maintaine-size">
+                 <h1>Subscribe to Our Newsletter</h1>
+                 <p>Get the latest trands,exclusive Offers, and style tips delivered directly to your inbox</p>
+                 <form class="subscribe-form-control" action="#" method="post">
+                    <input type="email" name="email" id="email" placeholder="Your email address">
+                    <button type="submit">Subscribe</button>
+                 </form>
+              </div>
+         </section>
+    </main>
+
+    <footer class="footer-background-color">
+        <div class="footer-container" class="maintaine-size">
+            <div class="each-footer-links">
+                <h2>Quick Links</h2>
+                <ul class="footer-main-links">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Reviews</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="each-footer-links">
+                <h2>Categories</h2>
+                <ul class="footer-main-links">
+                    <li><a href="">Dresses</a></li>
+                    <li><a href="">Tops</a></li>
+                    <li><a href="">Bottoms</a></li>
+                    <li><a href="">Outerwear</a></li>
+                    <li><a href="">Accessoris</a></li>
+                </ul>
+            </div>
+            <div class="each-footer-links">
+                <h2>Customer Service</h2>
+                <ul class="footer-main-links">
+                    <li><a href="#">Shipping Policy</a></li>
+                    <li><a href="#">Returns & Exchanges</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                    <li><a href="#">Care Instructions</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+
+            <div class="each-footer-links">
+                <h2>Contact Info</h2>
+                <p><span><i class="fa-sharp fa-light fa-phone"></i></span>(555) 123-4567</p>
+                <p><span><i class="fa-regular fa-envelope"></i></span>hello@fbshion.com</p>
+                <p><span><i class="fa-light fa-location-dot"></i></span>123 Fashion Ave, Style City</p>
+
+                <ul class="footer-icon-links">
+                    <li><a href=""><i class="fa-brands fa-facebook"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-instagram"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-twitter"></i></a></li>
+                    <li><a href=""><i class="fa-brands fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+        </div>
+         <hr class="maintaine-size-1">
+
+        <div class="footer-final" footer-final>
+            <p><span>&copy;</span>2023 Fashion Boutique Store.All right reserverd.</p>
+            <div class="footer-alignment">
+                <span>Privacy Policy</span>
+                <span>Terms of Service</span>
+            </div>
+        </div>
+
+    </footer>
+</body>
+</html>
